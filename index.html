@@ -10,7 +10,7 @@
     
     <style>
         body {
-            background-color: #C8A2C8; /* Lilás */
+            background-color: #C8A2C8;
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
@@ -21,67 +21,61 @@
 
         header {
             text-align: center;
-            padding: 50px 20px;
+            padding: 40px 15px;
         }
 
-        /* NOME DA LOJA: Letra desenhada e grande */
         h1 { 
             font-family: 'Dancing Script', cursive;
-            font-size: 5.5rem; 
+            font-size: clamp(3.5rem, 15vw, 6rem); /* Tamanho que se ajusta à tela */
             color: #000;
             margin: 0;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
-        header p {
-            font-size: 1.1rem;
-            color: #333;
-            margin-top: -10px;
-        }
-
-        /* CARROSSEL: Ajustado para fotos soltas na raiz */
+        /* AJUSTE DO CARROSSEL: FOCO NO TAMANHO DA IMAGEM */
         .swiper {
-            width: 90%;
-            max-width: 550px;
-            height: 550px;
-            background-color: white;
-            border-radius: 20px;
-            border: 10px solid white;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            width: 95%; /* Ocupa quase a largura toda no celular */
+            max-width: 600px;
+            background-color: #fff;
+            border-radius: 15px;
+            border: 8px solid white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            height: auto; /* Deixa a altura livre para a foto aparecer */
         }
 
         .swiper-slide {
             display: flex;
             justify-content: center;
             align-items: center;
+            background: #fff;
         }
 
         .swiper-slide img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain; /* Mostra a foto inteira sem cortes */
+            width: 100%; /* Ocupa toda a largura da caixa */
+            height: auto; /* Mantém a proporção original da foto */
+            display: block;
+            border-radius: 10px;
         }
 
         .historia-container {
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 25px;
-            padding: 40px;
-            margin: 40px 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 30px 15px;
             max-width: 600px;
             text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .btn-whatsapp {
             background-color: #25d366;
             color: white;
-            padding: 20px 45px;
+            padding: 18px 35px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             border-radius: 50px;
-            margin-bottom: 70px;
+            margin-bottom: 60px;
             display: inline-block;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
     </style>
 </head>
@@ -100,25 +94,26 @@
             <div class="swiper-slide"><img src="4.jpg" alt="Bolo 4"></div>
             <div class="swiper-slide"><img src="5.jpg" alt="Bolo 5"></div>
         </div>
+        <div class="swiper-button-next" style="color: #000;"></div>
+        <div class="swiper-button-prev" style="color: #000;"></div>
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-next" style="color: #C8A2C8;"></div>
-        <div class="swiper-button-prev" style="color: #C8A2C8;"></div>
     </div>
 
     <div class="historia-container">
-        <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.5rem;">Nossa Essência</h2>
+        <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.5rem; margin-bottom: 10px;">Nossa Essência</h2>
         <p>A Livily Doces nasceu do sonho de transformar ingredientes em arte. Cada detalhe é pensado para levar não apenas sabor, mas uma experiência inesquecível para a sua celebração.</p>
     </div>
 
-    <a href="https://wa.me/5500000000000" class="btn-whatsapp" target="_blank">
-        Falar com a Confeiteira
+    <a href="https://wa.me/5521976253577" class="btn-whatsapp" target="_blank">
+        Quero fazer uma encomenda! 
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
             loop: true,
-            autoplay: { delay: 3500 },
+            autoHeight: true, /* Faz a caixa mudar de tamanho conforme a foto */
+            autoplay: { delay: 3000 },
             navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
             pagination: { el: '.swiper-pagination', clickable: true },
         });
