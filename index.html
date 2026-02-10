@@ -103,6 +103,63 @@
         }
 
         .btn-whatsapp:hover { transform: scale(1.05); }
+
+        /* Secção de Depoimentos */
+.depoimentos-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 20px 15px 40px 15px;
+    text-align: center;
+}
+
+.depoimentos-container h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.8rem;
+    color: #51336E;
+    margin-bottom: 20px;
+}
+
+.card-depoimento {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    position: relative;
+    text-align: left;
+}
+
+/* Triângulo da bolha de fala */
+.card-depoimento::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 30px;
+    border-width: 15px 15px 0;
+    border-style: solid;
+    border-color: white transparent;
+}
+
+.texto-depoimento {
+    font-style: italic;
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.autor-depoimento {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #7B54A3;
+    font-size: 0.9rem;
+}
+
+.estrelas {
+    color: #FFD700; /* Cor dourada */
+    margin-bottom: 5px;
+    display: block;
+}
     </style>
 </head>
 <body>
@@ -144,6 +201,28 @@
         <p>A Livily Doces nasceu do sonho de transformar ingredientes em arte. Cada detalhe é pensado para levar não apenas sabor, mas uma experiência inesquecível para a sua celebração.</p>
     </div>
 
+    <div class="depoimentos-container">
+    <h2>O que dizem nossos clientes</h2>
+
+    <div class="card-depoimento">
+        <span class="estrelas">★★★★★</span>
+        <p class="texto-depoimento">"O melhor bolo que já comi na vida! A massa é super fofinha e o recheio de brigadeiro é divino. Recomendo muito!"</p>
+        <span class="autor-depoimento">— Ana Silva</span>
+    </div>
+
+    <div class="card-depoimento">
+        <span class="estrelas">★★★★★</span>
+        <p class="texto-depoimento">"Fiz o pedido para o aniversário da minha filha e todos os convidados amaram. Atendimento impecável e entrega pontual."</p>
+        <span class="autor-depoimento">— Carlos Oliveira</span>
+    </div>
+
+    <div class="card-depoimento">
+        <span class="estrelas">★★★★★</span>
+        <p class="texto-depoimento">"Os docinhos são obras de arte! Dá para sentir o carinho em cada detalhe. A Livily Doces agora faz parte de todas as nossas festas."</p>
+        <span class="autor-depoimento">— Mariana Costa</span>
+    </div>
+</div>
+
     <a href="https://wa.me/5521976253577" class="btn-whatsapp" target="_blank">
         Quero fazer uma encomenda! 
     </a>
@@ -160,3 +239,4 @@
     </script>
 </body>
 </html>
+
