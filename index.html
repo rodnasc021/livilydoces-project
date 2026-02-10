@@ -9,77 +9,101 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <style>
+        /* Fundo Geral Lilás */
         body {
-            background-color: #C8A2C8;
+            background-color: #C8A2C8; 
             margin: 0;
             padding: 0;
             font-family: 'Poppins', sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* O Chocolate Escorrendo (Lilás Escuro) */
+        .calda-topo {
+            width: 100%;
+            height: 120px;
+            background-color: #9370DB; /* Lilás mais escuro (Médio) */
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            /* Desenho das gotas escorrendo */
+            clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 95% 85%, 90% 70%, 85% 95%, 80% 70%, 75% 90%, 70% 70%, 65% 100%, 60% 70%, 55% 85%, 50% 70%, 45% 95%, 40% 70%, 35% 90%, 30% 70%, 25% 100%, 20% 70%, 15% 85%, 10% 70%, 5% 95%, 0% 70%);
         }
 
         header {
             text-align: center;
-            padding: 40px 15px;
+            padding: 60px 15px 30px 15px; /* Espaço para não cobrir a letra */
         }
 
         h1 { 
             font-family: 'Dancing Script', cursive;
-            font-size: clamp(3.5rem, 15vw, 6rem); /* Tamanho que se ajusta à tela */
+            font-size: clamp(3.5rem, 15vw, 6rem); 
             color: #000;
             margin: 0;
+            text-shadow: 2px 2px 10px rgba(255,255,255,0.5); /* Sombra clara para destacar no escuro */
         }
 
-        /* AJUSTE DO CARROSSEL: FOCO NO TAMANHO DA IMAGEM */
+        header p {
+            font-size: 1.1rem;
+            color: #333;
+            margin-top: -5px;
+            font-weight: bold;
+        }
+
         .swiper {
-            width: 95%; /* Ocupa quase a largura toda no celular */
-            max-width: 600px;
+            width: 92%;
+            max-width: 650px;
             background-color: #fff;
-            border-radius: 15px;
-            border: 8px solid white;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            height: auto; /* Deixa a altura livre para a foto aparecer */
-        }
-
-        .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #fff;
+            border-radius: 20px;
+            border: 10px solid white;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            margin-top: 20px;
         }
 
         .swiper-slide img {
-            width: 100%; /* Ocupa toda a largura da caixa */
-            height: auto; /* Mantém a proporção original da foto */
+            width: 100%;
+            height: auto;
             display: block;
-            border-radius: 10px;
+            object-fit: contain;
         }
 
         .historia-container {
             background-color: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
-            padding: 30px;
+            border-radius: 25px;
+            padding: 35px;
             margin: 30px 15px;
-            max-width: 600px;
+            max-width: 650px;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        .historia-container h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            margin-bottom: 10px;
         }
 
         .btn-whatsapp {
             background-color: #25d366;
             color: white;
-            padding: 18px 35px;
+            padding: 20px 45px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
-            border-radius: 50px;
-            margin-bottom: 60px;
+            font-size: 1.2rem;
+            border-radius: 60px;
+            margin-bottom: 80px;
             display: inline-block;
+            transition: transform 0.2s;
         }
     </style>
 </head>
 <body>
+
+    <div class="calda-topo"></div>
 
     <header>
         <h1>Livily Doces</h1>
@@ -100,7 +124,7 @@
     </div>
 
     <div class="historia-container">
-        <h2 style="font-family: 'Dancing Script', cursive; font-size: 2.5rem; margin-bottom: 10px;">Nossa Essência</h2>
+        <h2>Nossa Essência</h2>
         <p>A Livily Doces nasceu do sonho de transformar ingredientes em arte. Cada detalhe é pensado para levar não apenas sabor, mas uma experiência inesquecível para a sua celebração.</p>
     </div>
 
@@ -112,7 +136,7 @@
     <script>
         const swiper = new Swiper('.swiper', {
             loop: true,
-            autoHeight: true, /* Faz a caixa mudar de tamanho conforme a foto */
+            autoHeight: true, 
             autoplay: { delay: 3000 },
             navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
             pagination: { el: '.swiper-pagination', clickable: true },
@@ -120,4 +144,3 @@
     </script>
 </body>
 </html>
-
