@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <style>
-        /* Fundo Geral Lilás */
         body {
             background-color: #C8A2C8; 
             margin: 0;
@@ -21,35 +20,39 @@
             overflow-x: hidden;
         }
 
-        /* O Chocolate Escorrendo (Lilás Escuro) */
-        .calda-topo {
+        /* Container da calda SVG */
+        .calda-container {
             width: 100%;
-            height: 120px;
-            background-color: #9370DB; /* Lilás mais escuro (Médio) */
+            line-height: 0;
             position: absolute;
             top: 0;
             left: 0;
             z-index: -1;
-            /* Desenho das gotas escorrendo */
-            clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 95% 85%, 90% 70%, 85% 95%, 80% 70%, 75% 90%, 70% 70%, 65% 100%, 60% 70%, 55% 85%, 50% 70%, 45% 95%, 40% 70%, 35% 90%, 30% 70%, 25% 100%, 20% 70%, 15% 85%, 10% 70%, 5% 95%, 0% 70%);
+        }
+
+        .calda-container svg {
+            width: 100%;
+            height: auto;
+            fill: #4B2C20; /* Marrom Chocolate Escuro */
+            filter: drop-shadow(0px 5px 5px rgba(0,0,0,0.3));
         }
 
         header {
             text-align: center;
-            padding: 60px 15px 30px 15px; /* Espaço para não cobrir a letra */
+            padding: 80px 15px 30px 15px;
         }
 
         h1 { 
             font-family: 'Dancing Script', cursive;
             font-size: clamp(3.5rem, 15vw, 6rem); 
-            color: #000;
+            color: #fff; /* Branco para destacar no chocolate */
             margin: 0;
-            text-shadow: 2px 2px 10px rgba(255,255,255,0.5); /* Sombra clara para destacar no escuro */
+            text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
         }
 
         header p {
             font-size: 1.1rem;
-            color: #333;
+            color: #fff;
             margin-top: -5px;
             font-weight: bold;
         }
@@ -68,7 +71,6 @@
             width: 100%;
             height: auto;
             display: block;
-            object-fit: contain;
         }
 
         .historia-container {
@@ -78,13 +80,6 @@
             margin: 30px 15px;
             max-width: 650px;
             text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-        }
-
-        .historia-container h2 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 3rem;
-            margin-bottom: 10px;
         }
 
         .btn-whatsapp {
@@ -97,13 +92,20 @@
             border-radius: 60px;
             margin-bottom: 80px;
             display: inline-block;
-            transition: transform 0.2s;
         }
     </style>
 </head>
 <body>
 
-    <div class="calda-topo"></div>
+    <div class="calda-container">
+        <svg viewBox="0 0 1440 320" preserveAspectRatio="none">
+            <path d="M0,160L40,144C80,128,160,96,240,96C320,96,400,128,480,154.7C560,181,640,203,720,186.7C800,171,880,117,960,106.7C1040,96,1120,128,1200,144C1280,160,1360,160,1400,160L1440,160L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"></path>
+            <circle cx="200" cy="140" r="40" />
+            <circle cx="600" cy="210" r="50" />
+            <circle cx="1000" cy="160" r="45" />
+            <circle cx="1300" cy="180" r="35" />
+        </svg>
+    </div>
 
     <header>
         <h1>Livily Doces</h1>
@@ -124,7 +126,7 @@
     </div>
 
     <div class="historia-container">
-        <h2>Nossa Essência</h2>
+        <h2 style="font-family: 'Dancing Script', cursive; font-size: 3rem; margin: 0;">Nossa Essência</h2>
         <p>A Livily Doces nasceu do sonho de transformar ingredientes em arte. Cada detalhe é pensado para levar não apenas sabor, mas uma experiência inesquecível para a sua celebração.</p>
     </div>
 
