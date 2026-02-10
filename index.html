@@ -10,70 +10,95 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <style>
-        body {
-            background-color: #C8A2C8; /* Lilás */
-            color: #333;
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+    body {
+        background-color: #C8A2C8; /* Lilás */
+        color: #1a1a1a; /* Cinza quase preto (mais suave que o preto puro) */
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.6; /* Melhora a leitura do texto */
+    }
 
-        header {
-            text-align: center;
-            padding: 50px 20px;
-        }
+    header {
+        text-align: center;
+        padding: 60px 20px 30px 20px;
+    }
 
-        h1 { 
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            color: #000; /* Letra Preta */
-            text-shadow: 2px 2px 0px #C0C0C0; /* Sombra Prata */
-            margin: 0;
-            letter-spacing: -1px;
-        }
+    h1 { 
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.5rem, 8vw, 4rem); /* Tamanho responsivo: diminui no celular, aumenta no PC */
+        color: #000;
+        text-shadow: 2px 2px 0px #C0C0C0;
+        margin: 0;
+        line-height: 1.1;
+    }
 
-        .swiper {
-            width: 90%;
-            max-width: 500px;
-            height: 500px;
-            border-radius: 20px;
-            border: 8px solid #E0E0E0; /* Borda Prata */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-        }
+    header p {
+        font-size: 1.2rem;
+        color: #4a4a4a;
+        margin-top: 10px;
+    }
 
-        .swiper-slide img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+    /* Ajuste do Carrossel para fotos de Confeitaria */
+    .swiper {
+        width: 90%;
+        max-width: 500px;
+        aspect-ratio: 1 / 1; /* Mantém a foto sempre quadrada, como no Instagram */
+        border-radius: 25px;
+        border: 10px solid #ffffff; /* Borda branca grossa dá um aspecto de "foto polaroid" luxuosa */
+        box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
 
-        .historia-container {
-            background-color: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(10px);
-            border: 2px solid #E0E0E0;
-            border-radius: 20px;
-            padding: 30px;
-            margin: 40px 20px;
-            max-width: 600px;
-            text-align: center;
-            color: #000; /* Texto da história em preto para ler melhor */
-        }
+    .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Faz a foto preencher o espaço sem distorcer */
+    }
 
-        .btn-whatsapp {
-            background-color: #25d366;
-            color: white;
-            padding: 20px 40px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 20px;
-            border-radius: 50px;
-            margin-bottom: 50px;
-            transition: 0.3s;
-            display: inline-block;
-        }
-    </style>
+    /* Caixa de História mais elegante */
+    .historia-container {
+        background-color: rgba(255, 255, 255, 0.7); /* Mais opaco para leitura fácil */
+        border-radius: 30px;
+        padding: 40px;
+        margin: 40px 20px;
+        max-width: 700px;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    }
+
+    .historia-container h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .historia-container p {
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    /* Botão chamativo */
+    .btn-whatsapp {
+        background-color: #25d366;
+        color: white;
+        padding: 22px 50px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        border-radius: 60px;
+        margin-bottom: 60px;
+        transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        display: inline-block;
+        box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-whatsapp:hover {
+        transform: translateY(-5px); /* Botão sobe levemente ao passar o mouse */
+        box-shadow: 0 12px 25px rgba(37, 211, 102, 0.5);
+    }
+</style>
 </head>
 <body>
 
@@ -98,7 +123,7 @@
         <p>A Livily Doces nasceu da paixão por transformar ingredientes simples em memórias inesquecíveis. Começamos na cozinha de casa e hoje o nosso objetivo é tornar-nos a referência em doçaria artesanal da região.</p>
     </div>
 
-    <a href="https://wa.me/552196253577" class="btn-whatsapp" target="_blank">
+    <a href="https://wa.me/5521976253577" class="btn-whatsapp" target="_blank">
         Faça sua encomenda via WhatsApp
     </a>
 
@@ -112,4 +137,5 @@
     </script>
 </body>
 </html>
+
 
