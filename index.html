@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livily Doces - Confeitaria Artesanal</title>
+    <title>Livily Doces | Confeitaria</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <style>
         body {
-            background-color: #C8A2C8;
-            color: #1a1a1a;
-            font-family: 'Poppins', sans-serif;
+            background-color: #C8A2C8; /* Lilás */
             margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -21,61 +21,76 @@
 
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 60px 20px;
         }
 
+        /* NOME DA LOJA: Agora bem grande e atrativo */
         h1 { 
-            font-family: 'Playfair Display', serif;
-            font-size: 3rem;
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem; /* Fonte grande e elegante */
             color: #000;
-            text-shadow: 2px 2px 0px #C0C0C0;
             margin: 0;
+            text-shadow: 3px 3px 0px #E0E0E0;
         }
 
-        /* AJUSTE DO CARROSSEL: IMAGENS INTEIRAS */
+        header p {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            margin-top: -10px;
+        }
+
+        /* CARROSSEL: Forçando tamanho grande e visível */
         .swiper {
-            width: 90%;
-            max-width: 500px;
-            height: 500px; /* Tamanho fixo para não pular a tela */
-            background-color: #fff; /* Fundo branco caso a imagem seja menor */
-            border-radius: 20px;
-            border: 5px solid #E0E0E0;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 95%;
+            max-width: 600px; /* Aumentei o tamanho máximo */
+            height: 500px;
+            background-color: white;
+            border-radius: 30px;
+            border: 15px solid white;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
 
         .swiper-slide {
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
         }
 
         .swiper-slide img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain; /* O SEGREDO: imagem inteira sem cortes */
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* Garante que o bolo apareça TODO sem cortes */
         }
 
+        /* CAIXA DE HISTÓRIA */
         .historia-container {
-            background-color: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            margin: 30px 20px;
+            background-color: white;
+            border-radius: 25px;
+            padding: 40px;
+            margin: 50px 20px;
             max-width: 600px;
             text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
+        .historia-container h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #4a2c2a;
+        }
+
+        /* BOTÃO WHATSAPP */
         .btn-whatsapp {
             background-color: #25d366;
             color: white;
-            padding: 18px 40px;
+            padding: 22px 50px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.1rem;
-            border-radius: 50px;
-            margin-bottom: 50px;
-            display: inline-block;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            font-size: 1.2rem;
+            border-radius: 60px;
+            margin-bottom: 80px;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
         }
     </style>
 </head>
@@ -83,7 +98,7 @@
 
     <header>
         <h1>Livily Doces</h1>
-        <p>Adoçando seus momentos especiais</p>
+        <p>Confeitaria Artesanal & Decorada</p>
     </header>
 
     <div class="swiper">
@@ -95,17 +110,17 @@
             <div class="swiper-slide"><img src="img-project/5.jpg" alt="Bolo 5"></div>
         </div>
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-next" style="color: #666;"></div>
-        <div class="swiper-button-prev" style="color: #666;"></div>
+        <div class="swiper-button-next" style="color: #C8A2C8;"></div>
+        <div class="swiper-button-prev" style="color: #C8A2C8;"></div>
     </div>
 
     <div class="historia-container">
-        <h2 style="font-family: 'Playfair Display', serif;">A Nossa História</h2>
-        <p>A Livily Doces nasceu da paixão por transformar ingredientes simples em memórias inesquecíveis. Nosso objetivo é ser referência em doçaria artesanal, levando sabor e carinho a cada cliente.</p>
+        <h2>Nossa Essência</h2>
+        <p>A Livily Doces nasceu do sonho de adoçar celebrações com arte e sabor. Cada bolo é uma tela em branco, onde transformamos ingredientes de alta qualidade em memórias que ficam para sempre no paladar e no coração.</p>
     </div>
 
-    <a href="https://wa.me/5500000000000" class="btn-whatsapp" target="_blank">
-        Fazer uma encomenda pelo WhatsApp
+    <a href="https://wa.me/SEUNUMERO" class="btn-whatsapp" target="_blank">
+        Falar com a Confeiteira
     </a>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -113,8 +128,8 @@
         const swiper = new Swiper('.swiper', {
             loop: true,
             autoplay: { delay: 3000 },
-            pagination: { el: '.swiper-pagination', clickable: true },
             navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            pagination: { el: '.swiper-pagination', clickable: true },
         });
     </script>
 </body>
