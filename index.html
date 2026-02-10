@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Livily Doces - Confeitaria Artesanal</title>
+    <title>Livily Doces - Confeitaria & Doces Artesanais </title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <style>
-        /* Cores solicitadas: Lilás de fundo, letras Prata e Preto */
         body {
             background-color: #C8A2C8; /* Lilás */
-            color: #000000; /* Preto */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
-            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -22,19 +22,25 @@
 
         header {
             text-align: center;
-            padding: 40px 20px;
-            color: #E0E0E0; /* Prata */
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            padding: 50px 20px;
         }
 
-        /* Estilo do Carrossel */
+        h1 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            color: #000; /* Letra Preta */
+            text-shadow: 2px 2px 0px #C0C0C0; /* Sombra Prata */
+            margin: 0;
+            letter-spacing: -1px;
+        }
+
         .swiper {
             width: 90%;
-            max-width: 600px;
-            height: 400px;
+            max-width: 500px;
+            height: 500px;
             border-radius: 20px;
-            border: 5px solid #E0E0E0; /* Borda Prata */
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            border: 8px solid #E0E0E0; /* Borda Prata */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
         .swiper-slide img {
@@ -43,24 +49,18 @@
             object-fit: cover;
         }
 
-        /* Caixa de História */
         .historia-container {
-            background-color: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(5px);
-            border: 2px solid #E0E0E0; /* Prata */
-            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            border: 2px solid #E0E0E0;
+            border-radius: 20px;
             padding: 30px;
-            margin: 30px 20px;
-            max-width: 800px;
+            margin: 40px 20px;
+            max-width: 600px;
             text-align: center;
+            color: #000; /* Texto da história em preto para ler melhor */
         }
 
-        .historia-container h2 {
-            color: #E0E0E0; /* Prata */
-            margin-top: 0;
-        }
-
-        /* Botão WhatsApp */
         .btn-whatsapp {
             background-color: #25d366;
             color: white;
@@ -69,61 +69,36 @@
             font-weight: bold;
             font-size: 20px;
             border-radius: 50px;
-            display: inline-block;
             margin-bottom: 50px;
-            transition: transform 0.3s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        .btn-whatsapp:hover {
-            transform: scale(1.05);
-            background-color: #128c7e;
+            transition: 0.3s;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
 
-    <header> 
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.1), transparent); /* Dá um destaque no topo */
-        }
+    <header>
+        <h1>Livily Doces</h1>
+        <p>Adoçando seus momentos especiais</p>
     </header>
-    <h1>
-        h1 { 
-            font-family: 'Georgia', serif; /* Fonte mais elegante e clássica */
-            font-size: 3.5rem; /* Aumenta o tamanho */
-            color: #000000; /* Preto para leitura perfeita */
-            text-shadow: 3px 3px 0px #C0C0C0; /* Sombra Prata sólida que faz a letra "pular" da tela */
-            margin-bottom: 5px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-    </h1>
+
     <div class="swiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img-project/1.jpeg" alt="Bolo 1"></div>
-            <div class="swiper-slide"><img src="img-project/2.jpeg" alt="Bolo 2"></div>
-            <div class="swiper-slide"><img src="img-project/3.jpeg" alt="Bolo 3"></div>
-            <div class="swiper-slide"><img src="img-project/4.jpeg" alt="Bolo 4"></div>
-            <div class="swiper-slide"><img src="img-project/5.jpeg" alt="Bolo 5"></div>
+            <div class="swiper-slide"><img src="img-project/1.jpg" alt="Bolo 1"></div>
+            <div class="swiper-slide"><img src="img-project/2.jpg" alt="Bolo 2"></div>
+            <div class="swiper-slide"><img src="img-project/3.jpg" alt="Bolo 3"></div>
+            <div class="swiper-slide"><img src="img-project/4.jpg" alt="Bolo 4"></div>
+            <div class="swiper-slide"><img src="img-project/5.jpg" alt="Bolo 5"></div>
         </div>
         <div class="swiper-pagination"></div>
-        <div class="swiper-button-next" style="color: #E0E0E0;"></div>
-        <div class="swiper-button-prev" style="color: #E0E0E0;"></div>
     </div>
 
     <div class="historia-container">
-        <h2>A Nossa História</h2>
-        <p>
-            A Livily Doces nasceu da paixão por transformar ingredientes simples em memórias inesquecíveis. 
-            Começamos na cozinha de casa e hoje o nosso objetivo é tornar-nos a referência em doçaria artesanal da região. 
-            Queremos chegar ao coração de cada cliente, levando sabor e carinho através dos nossos bolos e doces personalizados.
-        </p>
+        <h2 style="font-family: 'Playfair Display', serif;">A Nossa História</h2>
+        <p>A Livily Doces nasceu da paixão por transformar ingredientes simples em memórias inesquecíveis. Começamos na cozinha de casa e hoje o nosso objetivo é tornar-nos a referência em doçaria artesanal da região.</p>
     </div>
 
-    <a href="https://wa.me/5521976253577?text=Olá! Vi o site e gostava de encomendar um doce!" class="btn-whatsapp" target="_blank">
+    <a href="https://wa.me/552196253577" class="btn-whatsapp" target="_blank">
         Faça sua encomenda via WhatsApp
     </a>
 
@@ -131,12 +106,9 @@
     <script>
         const swiper = new Swiper('.swiper', {
             loop: true,
-            pagination: { el: '.swiper-pagination', clickable: true },
-            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
             autoplay: { delay: 3000 },
+            pagination: { el: '.swiper-pagination', clickable: true },
         });
     </script>
 </body>
 </html>
-
-
